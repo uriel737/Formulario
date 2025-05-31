@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario de Aplicación - TICKCRAFT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      background: #101010;
+      color: #eee;
+      padding: 40px;
+    }
+    .form-container {
+      max-width: 700px;
+      margin: auto;
+      background: #1c1c1c;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,180,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #00ffc8;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 600;
+      color: #ccc;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      background: #2a2a2a;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 30px;
+      width: 100%;
+      background-color: #00ffc8;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00d6a0;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Solicitud de Ingreso - TICKCRAFT</h1>
+    <form action="https://formspree.io/f/tu-id" method="POST">
+
+      <label>👤 Nombre completo</label>
+      <input type="text" name="nombre" required>
+
+      <label>📅 Edad</label>
+      <input type="number" name="edad" required>
+
+      <label>⏰ Zona horaria</label>
+      <input type="text" name="zona" required>
+
+      <label>🕓 Disponibilidad horaria</label>
+      <input type="text" name="disponibilidad" required>
+
+      <label>🎯 Rol al que aplicas</label>
+      <select name="rol" required>
+        <option value="">Selecciona una opción</option>
+        <option>Staff (Moderación)</option>
+        <option>Administrador (Organización)</option>
+        <option>Configurador (Setups)</option>
+      </select>
+
+      <label>📜 Experiencia previa</label>
+      <textarea name="experiencia" rows="3" placeholder="Dinos en qué has trabajado, en qué servidores, etc."></textarea>
+
+      <label>💡 ¿Por qué deberíamos elegirte?</label>
+      <textarea name="motivacion" rows="3" required></textarea>
+
+      <label>💬 Usuario de Discord</label>
+      <input type="text" name="discord" placeholder="usuario#0000" required>
+
+      <label>📎 Portafolio (opcional)</label>
+      <input type="url" name="portafolio">
+
+      <label>📧 Correo electrónico (opcional)</label>
+      <input type="email" name="email">
+
+      <button type="submit">Enviar Solicitud</button>
+    </form>
+  </div>
+</body>
+</html>
